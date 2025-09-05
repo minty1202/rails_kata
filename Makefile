@@ -38,6 +38,9 @@ ps: ## コンテナの状態を表示
 bundle: ## bundle install
 	docker compose run --rm app bundle install
 
+bash: ## app コンテナに bash で入る
+	docker compose exec app bash
+
 #=====================
 # DB 操作
 #=====================
