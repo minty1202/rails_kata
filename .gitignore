@@ -30,3 +30,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/sorbet/rbi/gems/
+/sorbet/rbi/dsl/
+
+/vendor/bundle

@@ -17,6 +17,11 @@ init: ## 初期セットアップ（build, bundle, db作成, migrate, up）
 	docker compose run --rm app bin/rails db:create
 	docker compose run --rm app bin/rails db:migrate
 
+	@echo ">>> Initialize tapioca..."
+	docker compose run --rm app bundle exec tapioca init
+	docker compose run --rm app bundle exec tapioca gems
+	docker compose run --rm app bundle exec tapioca dsl
+
 	@echo ">>> Starting containers..."
 	docker compose up -d
 
