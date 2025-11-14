@@ -276,15 +276,15 @@ GEM
       fugit (~> 1.11.0)
       railties (>= 7.1)
       thor (>= 1.3.1)
-    sorbet (0.6.12479)
-      sorbet-static (= 0.6.12479)
-    sorbet-runtime (0.6.12479)
-    sorbet-static (0.6.12479-aarch64-linux)
-    sorbet-static (0.6.12479-universal-darwin)
-    sorbet-static (0.6.12479-x86_64-linux)
-    sorbet-static-and-runtime (0.6.12479)
-      sorbet (= 0.6.12479)
-      sorbet-runtime (= 0.6.12479)
+    sorbet (0.6.12763)
+      sorbet-static (= 0.6.12763)
+    sorbet-runtime (0.6.12763)
+    sorbet-static (0.6.12763-aarch64-linux)
+    sorbet-static (0.6.12763-universal-darwin)
+    sorbet-static (0.6.12763-x86_64-linux)
+    sorbet-static-and-runtime (0.6.12763)
+      sorbet (= 0.6.12763)
+      sorbet-runtime (= 0.6.12763)
     spoom (1.7.6)
       erubi (>= 1.10.0)
       prism (>= 0.28.0)
@@ -351,7 +351,7 @@ DEPENDENCIES
   solid_cable
   solid_cache
   solid_queue
-  sorbet (~> 0.6.12479)
+  sorbet (~> 0.6.12763)
   tapioca (~> 0.17.7)
   thruster
   tzinfo-data
