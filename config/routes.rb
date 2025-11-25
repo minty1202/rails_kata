@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :notes, only: [:index, :create]
   resources :safe_case_notes, only: [:index, :create]
   resources :repository_pattern_notes, only: [:index, :create]
+  resources :service_notes, only: [:index, :create]
 
   # Defines the root path route ("/")
   # root "posts#index"
