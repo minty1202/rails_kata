@@ -15,6 +15,7 @@ RUN apt-get update -y && apt-get install -y --no-install-recommends \
       ca-certificates \
       pkg-config \
       vim \
+      watchman \
     && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -ms /bin/bash app

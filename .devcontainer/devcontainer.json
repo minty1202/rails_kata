@@ -1,0 +1,24 @@
+{
+  "name": "Rails Kata",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/app",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "sorbet.sorbet-vscode-extension",
+        "shopify.ruby-lsp",
+        "rebornix.ruby"
+      ],
+      "settings": {
+        "sorbet.enabled": true,
+        "sorbet.commandPath": "bundle exec srb"
+      }
+    }
+  },
+
+  "postCreateCommand": "bundle install",
+
+  "remoteUser": "root"
+}

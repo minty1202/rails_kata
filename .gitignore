@@ -30,3 +30,24 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/sorbet/rbi/gems/
+/sorbet/rbi/dsl/
+
+/vendor/bundle
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Debug history
+.byebug_history
+
+# Test coverage
+/coverage/

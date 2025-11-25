@@ -17,6 +17,11 @@ init: ## 初期セットアップ（build, bundle, db作成, migrate, up）
 	docker compose run --rm app bin/rails db:create
 	docker compose run --rm app bin/rails db:migrate
 
+	@echo ">>> Initialize tapioca..."
+	docker compose run --rm app bundle exec tapioca init
+	docker compose run --rm app bundle exec tapioca gems
+	docker compose run --rm app bundle exec tapioca dsl
+
 	@echo ">>> Starting containers..."
 	docker compose up -d
 
@@ -70,6 +75,30 @@ reset: ## DBをdrop→create→migrate→seedまで
 
 console: ## Rails コンソールを開く
 	docker compose exec app bin/rails c
+
+#=====================
+# Sorbet / 型チェック
+#=====================
+
+typecheck: ## Sorbet型チェックを実行
+	docker compose exec app bundle exec srb tc
+
+tc: typecheck ## typecheckのエイリアス
+
+typecheck-auto: ## Sorbet型チェック（自動修正付き）
+	docker compose exec app bundle exec srb tc -a
+
+tapioca-gems: ## Gem用のRBIファイルを生成
+	docker compose run --rm app bundle exec tapioca gems
+
+tapioca-dsl: ## DSL用のRBIファイルを生成
+	docker compose run --rm app bundle exec tapioca dsl
+
+tapioca-all: ## 全てのRBIファイルを再生成
+	@echo ">>> Generating gem RBIs..."
+	docker compose run --rm app bundle exec tapioca gems
+	@echo ">>> Generating DSL RBIs..."
+	docker compose run --rm app bundle exec tapioca dsl
 
 #=====================
 # ヘルプ
