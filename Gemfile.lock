@@ -153,12 +153,15 @@ GEM
     nio4r (2.7.4)
     nokogiri (1.18.9-aarch64-linux-gnu)
       racc (~> 1.4)
+    nokogiri (1.18.9-x86_64-linux-gnu)
+      racc (~> 1.4)
     ostruct (0.6.3)
     parallel (1.27.0)
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
     pg (1.6.2-aarch64-linux)
+    pg (1.6.2-x86_64-linux)
     pp (0.6.2)
       prettyprint
     prettyprint (0.2.0)
@@ -269,13 +272,14 @@ GEM
       fugit (~> 1.11.0)
       railties (>= 7.1)
       thor (>= 1.3.1)
-    sorbet (0.6.12479)
-      sorbet-static (= 0.6.12479)
-    sorbet-runtime (0.6.12479)
-    sorbet-static (0.6.12479-aarch64-linux)
-    sorbet-static-and-runtime (0.6.12479)
-      sorbet (= 0.6.12479)
-      sorbet-runtime (= 0.6.12479)
+    sorbet (0.6.12789)
+      sorbet-static (= 0.6.12789)
+    sorbet-runtime (0.6.12789)
+    sorbet-static (0.6.12789-aarch64-linux)
+    sorbet-static (0.6.12789-x86_64-linux)
+    sorbet-static-and-runtime (0.6.12789)
+      sorbet (= 0.6.12789)
+      sorbet-runtime (= 0.6.12789)
     spoom (1.7.6)
       erubi (>= 1.10.0)
       prism (>= 0.28.0)
@@ -305,6 +309,7 @@ GEM
       yard-sorbet
     thor (1.4.0)
     thruster (0.1.15-aarch64-linux)
+    thruster (0.1.15-x86_64-linux)
     timeout (0.4.3)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -325,6 +330,7 @@ GEM
 
 PLATFORMS
   aarch64-linux-gnu
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -338,7 +344,7 @@ DEPENDENCIES
   solid_cable
   solid_cache
   solid_queue
-  sorbet (~> 0.6.12479)
+  sorbet (~> 0.6.12789)
   tapioca (~> 0.17.7)
   thruster
   tzinfo-data
