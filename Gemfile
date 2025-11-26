@@ -47,5 +47,5 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem 'tapioca', '~> 0.17.7', require: false
+  gem 'tapioca', '~> 0.17.9', require: false
 end
